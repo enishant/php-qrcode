@@ -16,8 +16,8 @@ if( isset( $_GET['data'] ) === true && empty( $_GET['data'] ) === false ) {
 	    new ImagickImageBackEnd()
 	);
 
-	$writer = new Writer($renderer);
-	$writer->writeFile($data, $file);
+	$writer = new Writer( $renderer );
+	$writer->writeFile( $data, $file );
 
 	if( file_exists( $file ) === true ) {
 		echo '<img src="' . $file . '" alt="QR Code">';
